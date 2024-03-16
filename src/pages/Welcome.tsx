@@ -1,5 +1,11 @@
+import { useSearchParams } from "react-router-dom";
+
 const Welcome = () => {
-  return <h1>Welcome</h1>;
+  const [searchParams] = useSearchParams();
+
+  const id = searchParams.get("id");
+
+  return <h1>Welcome id = {id}</h1>;
 };
 
 export default Welcome;
